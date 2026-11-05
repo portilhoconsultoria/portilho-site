@@ -1,0 +1,16 @@
+---
+const { estado = 0, inline = false, id } = Astro.props;
+---
+<div class={`painel${inline ? ' inline' : ''}`} data-estado={estado} id={id} aria-hidden="true">
+  <div class="p-hd"><span>Comercial da sua empresa</span><span class="agora">{estado === 2 ? 'com a Portilho' : 'este mês'}</span></div>
+  <div class="kpis">
+    <div class="kpi"><small>Quanto vendeu</small><b>R$ ●●●</b></div>
+    <div class="kpi perda"><small>Quanto deixou de vender</small><b><span class="q">?</span><span class="v">visível</span></b></div>
+  </div>
+  <div class="funil">
+    <div><span>Oportunidades que chegaram</span><span class="trilho"><i style="width:100%"></i></span></div>
+    <div><span>Orçamentos enviados</span><span class="trilho"><i style="width:68%"></i></span></div>
+    <div><span>Orçamentos retomados</span><span class="trilho"><i class="vaza r" style="width:28%"></i></span></div>
+    <div><span>Clientes chamados de novo</span><span class="trilho"><i class="vaza a" style="width:18%"></i></span></div>
+  </div>
+</div>

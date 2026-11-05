@@ -1,0 +1,26 @@
+---
+import { DESAFIOS, TIMES, waLink } from '../site';
+const { titulo = 'Agende a Auditoria Comercial', sub = 'O retorno vem pelo WhatsApp, direto com o Jhonatan.' } = Astro.props;
+---
+<div class="form-box" id="agendar">
+  <h3>{titulo}</h3>
+  <p class="form-nota">{sub}</p>
+  <form class="lead-form" novalidate>
+    <label>Seu nome<input name="nome" autocomplete="name" required /></label>
+    <label>Empresa<input name="empresa" autocomplete="organization" required /></label>
+    <label>WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(48) 99999-9999" required /></label>
+    <label>Tamanho do time de vendas
+      <select name="time" required><option value="">Selecione</option>{TIMES.map((t) => <option>{t}</option>)}</select>
+    </label>
+    <label>Qual frase descreve melhor o momento?
+      <select name="desafio" required><option value="">Selecione</option>{DESAFIOS.map((d) => <option>{d}</option>)}</select>
+    </label>
+    <input type="text" name="site_web" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true" />
+    <button class="btn" type="submit">Quero agendar a conversa</button>
+    <p class="form-erro">Preencha todos os campos. Se preferir, <a href={waLink()} data-ev="whatsapp">chame direto no WhatsApp</a>.</p>
+    <p class="form-nota">Seus dados ficam só com a Portilho e servem apenas para este contato.</p>
+  </form>
+</div>
+<script is:inline>
+(function(){document.querySelectorAll('.lead-form').forEach(function(f){if(f.dataset.on)return;f.dataset.on=1;f.addEventListener('submit',async function(e){e.preventDefault();var err=f.querySelector('.form-erro');var d=Object.fromEntries(new FormData(f));if(!d.nome||!d.empresa||!d.whatsapp||!d.time||!d.desafio){err.style.display='block';return}err.style.display='none';var b=f.querySelector('button');b.disabled=true;b.textContent='Enviando...';d.pagina=location.pathname;var p=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_content'].forEach(function(k){if(p.get(k))d[k]=p.get(k)});var ok=false;try{var r=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});ok=r.ok}catch(_){}try{window.gtag&&gtag('event','generate_lead',{desafio:d.desafio});window.fbq&&fbq('track','Lead')}catch(_){}if(ok){location.href='/obrigado'}else{var t='Olá, Jhonatan. Sou '+d.nome+', da '+d.empresa+'. Time de vendas: '+d.time+'. Momento: '+d.desafio+'. Quero agendar a Auditoria Comercial.';location.href='https://wa.me/5548988677262?text='+encodeURIComponent(t)}})})})();
+</script>

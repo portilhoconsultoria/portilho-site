@@ -1,0 +1,17 @@
+---
+import LeadForm from './LeadForm.astro';
+import { waLink } from '../site';
+const { foto = '', titulo = 'Vamos olhar juntos o que o seu comercial já tem para render?', texto = 'Na primeira conversa, entendemos o momento da empresa e mostramos como a Auditoria Comercial se aplica ao seu caso. Você sai dela sabendo o próximo passo.' } = Astro.props;
+---
+<section class="escuro" id="contato">
+  <div class={`wrap cta-final${foto ? ' com-foto' : ''}`}>
+    <div>
+      
+      <h2>{titulo}</h2>
+      <p class="lead mt">{texto}</p>
+      <div class="ctas"><a class="btn sec" href={waLink()} data-ev="whatsapp">Prefiro falar no WhatsApp</a></div>
+    </div>
+    {foto && (<div class="frame cta-foto"><picture><source srcset={`/img/${foto}.webp`} type="image/webp" /><img src={`/img/${foto}.jpg`} alt="Jhonatan Portilho" width="960" height="1200" /></picture></div>)}
+    <LeadForm />
+  </div>
+</section>

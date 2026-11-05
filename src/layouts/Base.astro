@@ -1,0 +1,56 @@
+---
+import '@fontsource-variable/newsreader/opsz.css';
+import '@fontsource/ibm-plex-sans/400.css';
+import '@fontsource/ibm-plex-sans/500.css';
+import '@fontsource/ibm-plex-sans/600.css';
+import '../styles.css';
+import { SITE, waLink } from '../site';
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const og = new URL('/img/og.jpg', Astro.site);
+const schema = {
+  '@context': 'https://schema.org', '@type': 'ProfessionalService', name: SITE.nome,
+  description: 'Consultoria Comercial Inteligente para empresas que já vendem e querem vender mais.',
+  url: Astro.site?.toString(), logo: new URL('/img/logo_azul.png', Astro.site).toString(), image: og.toString(),
+  founder: { '@type': 'Person', name: 'Jhonatan Martins Portilho' },
+  address: { '@type': 'PostalAddress', addressLocality: SITE.cidade, addressRegion: SITE.uf, addressCountry: 'BR' },
+  areaServed: [{ '@type': 'State', name: 'Santa Catarina' }, { '@type': 'State', name: 'Paraná' }],
+  knowsAbout: ['Consultoria Comercial', 'Gestão Comercial', 'Inteligência Artificial em Vendas', 'Inteligência de Dados', 'Previsibilidade de Vendas', 'Processos Comerciais', 'Gestão de Equipe de Vendas', 'Indicadores Comerciais', 'CRM', 'Conversão de Vendas'],
+};
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content="Consultoria Comercial, Máquina de Vendas, Gestão Comercial, Inteligência Artificial em Vendas, Inteligência de Dados, Previsibilidade de Vendas, Processos Comerciais, Gestão de Equipe de Vendas, Indicadores Comerciais, CRM, Conversão de Vendas, Direcionamento Estratégico" />
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content="website" /><meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content={SITE.nome} /><meta property="og:title" content={title} />
+<meta property="og:description" content={description} /><meta property="og:url" content={canonical} />
+<meta property="og:image" content={og} /><meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#1C6086" />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+{SITE.ga4 && (<><script async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}`}></script>
+<script is:inline define:vars={{ id: SITE.ga4 }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',id);</script></>)}
+{SITE.pixel && (<script is:inline define:vars={{ id: SITE.pixel }}>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',id);fbq('track','PageView');</script>)}
+</head>
+<body>
+<header class="top">
+  <a href="/" class="marca" aria-label="Portilho Inteligência Comercial"><img src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" /></a>
+  <nav id="nav"><a href="#problema">O problema</a><a href="#caso">Casos</a><a href="#metodo">Método</a><a href="#quem">Quem conduz</a></nav>
+  <a class="btn btn-sm" href={waLink()} data-ev="whatsapp">Conversar no WhatsApp</a>
+</header>
+<main><slot /></main>
+<footer class="rodape">
+  <img src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" />
+  <p>{SITE.cidade}/{SITE.uf} · <a href={waLink()} data-ev="whatsapp">WhatsApp (48) 98867-7262</a> · <a href={SITE.wviUrl} rel="noopener">WhatsApp Vendedor Inteligente</a></p>
+  <p class="cnpj"><a href="/privacidade">Política de Privacidade</a> · © {new Date().getFullYear()} Portilho Consultoria e Assessoria Empresarial LTDA · CNPJ 50.847.733/0001-34</p>
+</footer>
+<script is:inline>document.addEventListener('click',function(e){var a=e.target.closest('[data-ev="whatsapp"]');if(!a)return;try{window.gtag&&gtag('event','contato_whatsapp');window.fbq&&fbq('track','Contact')}catch(_){}});</script>
+</body>
+</html>
