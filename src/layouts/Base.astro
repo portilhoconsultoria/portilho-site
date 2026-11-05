@@ -33,7 +33,9 @@ const schema = {
 <meta property="og:description" content={description} /><meta property="og:url" content={canonical} />
 <meta property="og:image" content={og} /><meta name="twitter:card" content="summary_large_image" />
 <meta name="theme-color" content="#1C6086" />
-<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=2" />
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=2" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2" />
 <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 {SITE.ga4 && (<><script async src={`https://www.googletagmanager.com/gtag/js?id=${SITE.ga4}`}></script>
 <script is:inline define:vars={{ id: SITE.ga4 }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config',id);</script></>)}
