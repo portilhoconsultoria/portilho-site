@@ -12,10 +12,9 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
     <!-- Passo 0 — blocos 2 e 3 -->
     <section class="passo" data-passo="0">
       <span class="rot">Consultoria Comercial Inteligente</span>
-      <h1>A IA já mudou como o seu cliente compra. Nós implementamos essa mudança no seu comercial.</h1>
+      <h1>Sua empresa sabe que precisa de IA. Nós mostramos por onde começar e implementamos no seu comercial.</h1>
       <p class="lead">Sua empresa pode vender mais. O que trava é um comercial sem clareza.</p>
       <div class="ctas"><a class="btn" href={waLink()} data-ev="whatsapp"><Fragment set:html={wa} />Conversar no WhatsApp</a></div>
-      <p class="gratis">A primeira conversa é gratuita.</p>
       <Painel estado={0} inline />
     </section>
     <!-- Passo 1 — bloco 5 (portas + frase D) -->
@@ -52,10 +51,19 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
       <p class="frase-fluir">O diagnóstico indica o estágio. O estágio indica a prioridade. A prioridade indica a solução.</p>
     </div>
     <ol class="escada2">
-      <li class="d1">
+      <li class="d0">
         <div class="deg">
           <span class="num">1</span>
-          <span class="etapa">Entrada</span>
+          <span class="etapa">Primeiro passo</span>
+          <h3>Diagnóstico</h3>
+          <p class="sub2">Uma leitura do momento da empresa.</p>
+          <ul><li>Processos, equipe e indicadores</li><li>O que precisa ser decidido agora</li><li>Indicação do próximo passo</li></ul>
+        </div>
+      </li>
+      <li class="d1">
+        <div class="deg">
+          <span class="num">2</span>
+          <span class="etapa">Aprofundamento</span>
           <h3>Auditoria Comercial</h3>
           <p class="sub2">Mede o que a empresa nunca mediu.</p>
           <ul><li>Raio-X da base de clientes</li><li>Teste de rota: entramos como cliente e medimos a resposta</li><li>Conta do vazamento e plano de 12 meses</li></ul>
@@ -63,7 +71,7 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
       </li>
       <li class="d2">
         <div class="deg dest">
-          <span class="num">2</span>
+          <span class="num">3</span>
           <span class="etapa">Principal</span>
           <h3>Consultoria Comercial Inteligente</h3>
           <p class="sub2">Estruturar e implementar.</p>
@@ -72,7 +80,7 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
       </li>
       <li class="d3">
         <div class="deg">
-          <span class="num">3</span>
+          <span class="num">4</span>
           <span class="etapa">Continuidade</span>
           <h3>Gestão e Inteligência</h3>
           <p class="sub2">Acompanhar, interpretar e evoluir.</p>
