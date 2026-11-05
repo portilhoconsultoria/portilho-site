@@ -202,3 +202,12 @@ h1,h2{font-family:var(--serif);font-weight:400;color:var(--tinta);letter-spacing
 .sela{font:400 1.25rem/1.4 var(--serif);color:var(--tinta);margin-top:28px!important}
 @media(max-width:860px){.quem2{grid-template-columns:1fr!important}.quem2 .foto{position:static}.atua ul{grid-template-columns:1fr}}
 .escada2 .d1{padding-top:150px}.escada2 .d2{padding-top:75px}.deg.dest .etapa{color:#8FC0DC}.sela{color:var(--tinta)!important}
+
+.linha-tempo{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);margin:28px 0 8px;position:relative;border-top:2px solid var(--nevoa)}
+.linha-tempo li{padding:18px 16px 0 0;position:relative}
+.linha-tempo li:before{content:'';position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--azul);box-shadow:0 0 0 4px #fff}
+.linha-tempo b{display:block;font:500 1.6rem/1 var(--serif);color:var(--tinta);margin-bottom:6px}
+.linha-tempo span{font-size:.95rem;color:var(--suave)}
+.paixao{margin:28px 0 0;padding:22px 26px;border-left:4px solid var(--azul);background:var(--papel);font:400 1.15rem/1.5 var(--serif);color:var(--tinta);border-radius:0 8px 8px 0}
+.chips.claros span{border-color:#BCCBD5;color:var(--tinta);background:#fff}
+@media(max-width:560px){.linha-tempo{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--nevoa);padding-left:18px}.linha-tempo li{padding:0 0 16px}.linha-tempo li:before{left:-26px;top:4px}}
