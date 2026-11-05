@@ -217,3 +217,17 @@ h1,h2{font-family:var(--serif);font-weight:400;color:var(--tinta);letter-spacing
 .quem-num div{display:flex;flex-direction:column}
 .quem-num b{font-family:'Newsreader Variable',serif;font-size:2.1rem;line-height:1;color:var(--azul)}
 .quem-num span{font-size:.85rem;color:var(--tinta);opacity:.75;margin-top:4px}
+
+/* Depoimentos contextuais */
+.depos{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:72px}
+.depo{margin:0;background:#fff;border:1px solid var(--nevoa);border-left:4px solid var(--azul);border-radius:10px;padding:28px 30px}
+.depo-tag{display:block;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--azul);margin-bottom:12px}
+.depo blockquote{margin:0;font:400 1.2rem/1.45 var(--serif);color:var(--tinta)}
+.depo figcaption{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:16px;font-size:.92rem;color:var(--suave)}
+.depo figcaption b{color:var(--tinta);font-weight:600}
+.depo figcaption span:before{content:'·';margin-right:10px}
+.depo figcaption img{height:28px;width:auto}
+.depo-caso{margin-top:28px;padding:22px 24px}
+.depo-escuro{background:#ffffff0d;border-color:#ffffff22;border-left-color:#8FC0DC;margin-top:56px;max-width:860px}
+.depo-escuro blockquote{color:#fff}.depo-escuro figcaption{color:#C3D4DF}.depo-escuro figcaption b{color:#fff}
+@media(max-width:900px){.depos{grid-template-columns:1fr}}
