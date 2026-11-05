@@ -42,14 +42,14 @@ const schema = {
 <body>
 <header class="top">
   <a href="/" class="marca" aria-label="Portilho Inteligência Comercial"><img src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" /></a>
-  <nav id="nav"><a href="#problema">O problema</a><a href="#caso">Casos</a><a href="#metodo">Método</a><a href="#quem">Quem conduz</a></nav>
+  <nav id="nav"><a href="#solucoes">Soluções</a><a href="#problema">O problema</a><a href="#caso">Casos</a><a href="#metodo">Método</a><a href="#quem">Quem conduz</a></nav>
   <a class="btn btn-sm" href={waLink()} data-ev="whatsapp">Conversar no WhatsApp</a>
 </header>
 <main><slot /></main>
 <footer class="rodape">
   <img src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" />
   <p>{SITE.cidade}/{SITE.uf} · <a href={waLink()} data-ev="whatsapp">WhatsApp (48) 98867-7262</a> · <a href={SITE.wviUrl} rel="noopener">WhatsApp Vendedor Inteligente</a></p>
-  <p class="cnpj"><a href="/privacidade">Política de Privacidade</a> · © {new Date().getFullYear()} Portilho Consultoria e Assessoria Empresarial LTDA · CNPJ 50.847.733/0001-34</p>
+  <p class="cnpj"><a href="/privacidade">Política de Privacidade</a> · © {new Date().getFullYear()} Portilho Inteligência Comercial</p>
 </footer>
 <script is:inline>document.addEventListener('click',function(e){var a=e.target.closest('[data-ev="whatsapp"]');if(!a)return;try{window.gtag&&gtag('event','contato_whatsapp');window.fbq&&fbq('track','Contact')}catch(_){}});</script>
 </body>

@@ -132,3 +132,25 @@ h1,h2{font-family:var(--serif);font-weight:400;color:var(--tinta);letter-spacing
 .dado{margin-top:22px;padding-left:16px;border-left:3px solid var(--azul);font-size:.98rem;color:var(--suave);max-width:46ch}
 .quem .nome{font-weight:600;color:var(--tinta);margin:18px 0 14px}
 .quem .wrap>div>p+p{margin-top:12px}
+.solucoes{padding:120px 0}
+.degraus{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.degrau2{border:1px solid var(--nevoa);border-radius:8px;padding:30px;background:#fff;display:flex;flex-direction:column}
+.degrau2.dest{background:var(--tinta);border-color:var(--tinta);color:#C3D4DF}
+.degrau2.dest h3,.degrau2.dest .sub2{color:#fff}
+.etapa{font-size:.9rem;font-weight:600;color:var(--azul);margin-bottom:10px}
+.degrau2.dest .etapa{color:#8FC0DC}
+.degrau2 h3{font:500 1.6rem/1.15 var(--serif);margin-bottom:6px}
+.sub2{font:400 1.15rem var(--serif);color:var(--tinta);margin-bottom:16px}
+.degrau2 .resp{margin-top:14px;padding-top:14px;border-top:1px solid var(--nevoa);font-size:.95rem}
+.degrau2.dest .resp{border-color:#ffffff22}
+.frase-fluir{margin-top:40px;font:400 clamp(1.3rem,2vw,1.6rem)/1.3 var(--serif);color:var(--tinta)}
+.pilares{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:10px}
+.pilares h3{font:400 clamp(2rem,3.4vw,3rem)/1.1 var(--serif);color:#fff;margin-bottom:16px}
+.pilares div:last-child h3{color:#8FC0DC}
+.paraquem{padding:110px 0;background:var(--papel)}
+.paraquem .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.paraquem h2{font-size:clamp(2rem,3.4vw,3rem);line-height:1.1}
+.sintomas{list-style:none}.sintomas li{padding:16px 0;border-top:1px solid var(--nevoa);color:var(--tinta)}.sintomas li:last-child{border-bottom:1px solid var(--nevoa)}
+.fim-centro{display:flex!important;flex-direction:column;align-items:center;text-align:center}
+@media(max-width:900px){.degraus,.pilares,.paraquem .wrap{grid-template-columns:1fr}}
+.solucoes h2{font-size:clamp(2.1rem,3.6vw,3.3rem);line-height:1.08;max-width:22ch}

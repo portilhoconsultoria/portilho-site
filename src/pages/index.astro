@@ -39,6 +39,40 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
   <div class="lado"><div class="fixo"><Painel estado={0} id="painel" /></div></div>
 </div>
 
+
+<!-- Soluções — relatório da Fluir, 4.4 "A escada de soluções" -->
+<section class="solucoes" id="solucoes">
+  <div class="wrap">
+    <span class="rot">O que você pode contratar</span>
+    <h2>Empresas chegam em momentos diferentes.</h2>
+    <p class="lead mt">Algumas precisam primeiro entender o que está errado. Outras já sabem onde estão os problemas, mas não conseguem estruturar a execução. Outras possuem processos e equipe, mas precisam melhorar gestão, indicadores e capacidade de decisão.</p>
+    <div class="degraus">
+      <article class="degrau2">
+        <span class="etapa">Entrada</span>
+        <h3>Diagnóstico e Organização</h3>
+        <p class="sub2">Entender e priorizar.</p>
+        <p>Compreender a empresa, mapear sua operação comercial, identificar gargalos, avaliar processos, equipe e indicadores e estabelecer prioridades.</p>
+        <p class="resp">Ao final, você responde: onde estamos, o que está impedindo a evolução, o que precisa ser priorizado e qual é o próximo passo adequado.</p>
+      </article>
+      <article class="degrau2 dest">
+        <span class="etapa">Principal</span>
+        <h3>Consultoria Comercial Inteligente</h3>
+        <p class="sub2">Estruturar e implementar.</p>
+        <p>Para empresas que já possuem vendas e equipe e precisam transformar sua operação comercial em um sistema mais estruturado.</p>
+        <p class="resp">Processos comerciais, funil, CRM, metas, indicadores, rotina de gestão, desenvolvimento da equipe, acompanhamento da liderança e implementação das mudanças necessárias.</p>
+      </article>
+      <article class="degrau2">
+        <span class="etapa">Continuidade</span>
+        <h3>Gestão e Inteligência</h3>
+        <p class="sub2">Acompanhar, interpretar e evoluir.</p>
+        <p>Depois da estruturação, o objetivo passa a ser melhorar a qualidade da gestão.</p>
+        <p class="resp">Leitura de indicadores, reuniões estratégicas, otimização comercial, desenvolvimento de liderança, planejamento, acompanhamento de performance e apoio a decisões de crescimento.</p>
+      </article>
+    </div>
+    <p class="frase-fluir">O diagnóstico indica o estágio. O estágio indica a prioridade. A prioridade indica a solução.</p>
+  </div>
+</section>
+
 <!-- Clientes — mesma lista e título do site comercialinteligente.com.br -->
 <section class="clientes" aria-labelledby="t-cli">
   <h2 id="t-cli">Empresas que confiam</h2>
@@ -81,11 +115,32 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
   </div>
 </section>
 
-<!-- Método PCG — mantido da Fluir -->
+<!-- Método PCG — relatório da Fluir, 4.1 e 4.2 -->
 <section class="metodo" id="metodo">
   <div class="wrap">
     <span class="rot">Método PCG</span>
-    <div class="camadas"><p>Processos organizam.</p><p>Cultura sustenta.</p><p>Dados orientam.</p></div>
+    <div class="pilares">
+      <div><h3>Processos organizam.</h3><p>Fluxos comerciais, responsabilidades, funil, CRM, rotinas, padrões de atendimento, acompanhamento e organização da execução. Processos ajudam a transformar conhecimento individual em capacidade organizacional.</p></div>
+      <div><h3>Cultura sustenta.</h3><p>Clareza de responsabilidades, comunicação, acompanhamento, liderança, autonomia, alinhamento, rotina de gestão e cultura de execução. Processos estruturam o trabalho. Cultura faz o trabalho continuar acontecendo.</p></div>
+      <div><h3>Dados orientam.</h3><p>Metas, indicadores, conversão, ticket, produtividade, acompanhamento de resultados, previsibilidade e tomada de decisão. Dados não são o fim. São instrumentos para decidir melhor.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Para quem — relatório da Fluir, 5.2 -->
+<section class="paraquem">
+  <div class="wrap">
+    <div>
+      <span class="rot">Para quem</span>
+      <h2>Empresas em que o crescimento aconteceu antes da estrutura.</h2>
+    </div>
+    <ul class="sintomas">
+      <li>Já possui operação comercial, equipe e vendas acontecendo.</li>
+      <li>Chegou a um nível em que o improviso começa a cobrar um preço.</li>
+      <li>Encontra dificuldade para acompanhar processos e indicadores.</li>
+      <li>Possui dependência relevante do proprietário ou de pessoas-chave.</li>
+      <li>Deseja organizar a gestão para continuar crescendo, com abertura para rever processos e implementar mudanças.</li>
+    </ul>
   </div>
 </section>
 
@@ -103,14 +158,11 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
   </div>
 </section>
 
-<!-- Fechamento — foto 2 -->
+<!-- Fechamento -->
 <section class="fim">
-  <div class="wrap">
-    <div>
-      <img class="fim-logo" src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" loading="lazy" />
-      <div class="ctas"><a class="btn" href={waLink()} data-ev="whatsapp"><Fragment set:html={wa} />Conversar no WhatsApp</a></div>
-    </div>
-    <div class="foto"><picture><source srcset="/img/jhonatan-sentado.webp" type="image/webp" /><img src="/img/jhonatan-sentado.jpg" alt="Jhonatan Martins Portilho" width="960" height="1200" loading="lazy" /></picture></div>
+  <div class="wrap fim-centro">
+    <img class="fim-logo" src="/img/logo_azul.png" alt="Portilho Inteligência Comercial" width="720" height="129" loading="lazy" />
+    <div class="ctas"><a class="btn" href={waLink()} data-ev="whatsapp"><Fragment set:html={wa} />Conversar no WhatsApp</a></div>
   </div>
 </section>
 
