@@ -12,9 +12,10 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
     <!-- Passo 0 — blocos 2 e 3 -->
     <section class="passo" data-passo="0">
       <span class="rot">Consultoria Comercial Inteligente</span>
-      <h1>Sua empresa pode vender mais. O que trava é um comercial sem clareza.</h1>
-      <p class="lead">Para empresas que já vendem e querem vender mais. Damos clareza ao comercial (processos, equipe e indicadores) com a inteligência artificial integrada desde o início, e implementamos junto com você.</p>
+      <h1>A IA já mudou como o seu cliente compra. Nós implementamos essa mudança no seu comercial.</h1>
+      <p class="lead">Sua empresa pode vender mais. O que trava é um comercial sem clareza.</p>
       <div class="ctas"><a class="btn" href={waLink()} data-ev="whatsapp"><Fragment set:html={wa} />Conversar no WhatsApp</a></div>
+      <p class="gratis">A primeira conversa é gratuita.</p>
       <Painel estado={0} inline />
     </section>
     <!-- Passo 1 — bloco 5 (portas + frase D) -->
@@ -48,16 +49,16 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
         <span class="rot">Soluções</span>
         <h2>Empresas chegam em momentos diferentes.</h2>
       </div>
-      <p class="frase-fluir">O diagnóstico indica o estágio. O estágio indica a prioridade. A prioridade indica a solução.</p>
+      <p class="frase-fluir">A Auditoria indica o estágio. O estágio indica a prioridade. A prioridade indica a solução.</p>
     </div>
     <ol class="escada2">
       <li class="d1">
         <div class="deg">
           <span class="num">1</span>
           <span class="etapa">Entrada</span>
-          <h3>Diagnóstico e Organização</h3>
-          <p class="sub2">Entender e priorizar.</p>
-          <ul><li>Mapa da operação comercial</li><li>Gargalos de processos, equipe e indicadores</li><li>Prioridades e próximo passo</li></ul>
+          <h3>Auditoria Comercial</h3>
+          <p class="sub2">Mede o que a empresa nunca mediu.</p>
+          <ul><li>Raio-X da base de clientes</li><li>Teste de rota: entramos como cliente e medimos a resposta</li><li>Conta do vazamento e plano de 12 meses</li></ul>
         </div>
       </li>
       <li class="d2">
@@ -140,8 +141,8 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
       <article class="pil">
         <span class="letra">C</span>
         <h3>Cultura</h3>
-        <p>Faz o trabalho continuar acontecendo.</p>
-        <div class="chips"><span>Responsabilidades</span><span>Liderança</span><span>Acompanhamento</span><span>Rotina de gestão</span><span>Execução</span></div>
+        <p>Sustenta o processo no comportamento real da empresa.</p>
+        <div class="chips"><span>Responsabilidades</span><span>Liderança</span><span>Acompanhamento</span><span>Rotina de gestão</span></div>
       </article>
       <span class="liga" aria-hidden="true"></span>
       <article class="pil">
@@ -176,15 +177,16 @@ const wa = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.
     <div>
       <span class="rot">Quem conduz</span>
       <h2>Jhonatan abre a relação. A Portilho sustenta a entrega.</h2>
-      <p class="nome">Jhonatan Martins Portilho, fundador · 12 anos em consultoria comercial</p>
-      <p>Formado em Administração, foi consultor do SEBRAE, servidor público concursado e gerente de negócios bancário antes de fundar a Portilho. Atende indústrias familiares, distribuidoras atacadistas e prestadoras de serviço no Paraná, em Santa Catarina e no Paraguai.</p>
+      <p class="nome">Jhonatan Martins Portilho, fundador · consultor desde 2015</p>
+      <div class="quem-num"><div><b>+800</b><span>empresas atendidas</span></div><div><b>+5.000</b><span>horas de consultoria</span></div></div>
+      <p>Formado em Administração, com especialização em Estratégia Comercial, foi consultor do SEBRAE, servidor público concursado e gerente de negócios bancário antes de fundar a Portilho. Atende indústrias familiares, distribuidoras atacadistas e prestadoras de serviço no Paraná, em Santa Catarina e no Paraguai.</p>
       <ol class="linha-tempo">
         <li><b>21 anos</b><span>Empreendeu pela primeira vez</span></li>
-        <li><b>27 anos</b><span>Começou a carreira de consultor</span></li>
-        <li><b>35 anos</b><span>Transformou a atuação em uma empresa de consultoria</span></li>
+        <li><b>2015</b><span>Começou a carreira de consultor</span></li>
+        <li><b>2024</b><span>A Portilho se torna empresa de consultoria</span></li>
       </ol>
       <p>Dos 8 aos 17 anos, acompanhava a mãe quase todos os dias nas compras no Paraguai. Cresceu entre árabes, chineses, paraguaios, indianos e argentinos, e ali se apaixonou por empreendedorismo.</p>
-      <blockquote class="paixao">“A minha paixão é observar e aprender sobre o comportamento humano. Meu paradoxo favorito: criar lógicas e equações para analisar o comportamento humano em vendas, que eu sei bem, passa longe de ser uma ciência exata.”</blockquote>
+      <blockquote class="paixao">“A minha paixão é observar e aprender sobre o comportamento humano. Flertar com a linha tênue entre entender a mente humana e vivenciar o caos nela. Meu paradoxo favorito: criar lógicas e equações para analisar o comportamento humano em vendas, que eu sei bem, passa longe de ser uma ciência exata.”</blockquote>
       <div class="atua">
         <span class="atua-t">Competências</span>
         <div class="chips claros"><span>Estratégia Comercial</span><span>Inteligência de Dados</span><span>Processos empresariais</span><span>Planejamento estratégico</span><span>Design conversacional com IA</span><span>Produtividade</span><span>Psicanálise</span><span>PNL</span><span>Direito tributário</span></div>
